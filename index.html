@@ -55,26 +55,26 @@
 
         <!-- burger-menu -->
 
-        <button class="btn-open-burger js-open-menu" type="button">
+        <button class="btn-open-burger" type="button" data-menu-open>
           <svg
             class="svg-open-burger"
-            aria-label="btn-open-hamburger"
+            aria-label="btn-open-burger"
             width="18"
             height="16"
           >
             <use href="./images/icons.svg#icon-Group-2"></use>
           </svg>
         </button>
-        <div class="mobile-menu-container">
-          <div class="mobile-menu-wrapper">
-            <button class="mobile-menu-close js-close-menu" type="button">
+        <div class="mobile-menu-container is-open" data-menu>
+          <div class="mobile-menu-window">
+            <button class="mobile-menu-close" type="button" data-menu-close>
               <svg
                 class="svg-close-icon"
                 aria-label="mobile-menu-close"
                 width="8"
                 height="8"
               >
-                <use href="./images/icons.svg#icon-Checkbox"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
               </svg>
             </button>
             <ul class="mobile-menu-list">
@@ -144,7 +144,9 @@
       <section class="section-one">
         <div class="container">
           <h1 class="header-one">Effective Solutions for Your Business</h1>
-          <button type="button" class="button-title">Order Service</button>
+          <button type="button" class="button-title" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -509,6 +511,8 @@
       </section>
     </main>
 
+    <!-- footer -->
+
     <footer class="footer">
       <div class="container container-footer">
         <div class="logo-footer">
@@ -520,7 +524,6 @@
             digital marketing & growth solutions.
           </p>
         </div>
-
         <div class="icons-footer-container">
           <p class="social-media">Social media</p>
           <ul class="list-footer-media">
@@ -575,9 +578,11 @@
       </div>
     </footer>
 
-    <div class="modal-container">
+    <!-- modal -->
+
+    <div class="modal-container" data-modal>
       <div class="modal-window">
-        <button type="button" class="close-btn">
+        <button type="button" class="close-btn" data-modal-close>
           <svg width="8" height="8" class="close-icon">
             <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
           </svg>
@@ -593,7 +598,7 @@
                 id="user-name"
                 type="text"
                 name="user-name"
-                class="input-name"
+                class="input-field"
               />
               <svg width="18" height="24" class="svg-name">
                 <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
@@ -608,7 +613,7 @@
                 id="user-phone"
                 type="tel"
                 name="user-name"
-                class="input-name"
+                class="input-field"
               />
               <svg width="18" height="24" class="svg-name">
                 <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
@@ -623,7 +628,7 @@
                 id="user-email"
                 type="email"
                 name="user-name"
-                class="input-name"
+                class="input-field"
               />
               <svg width="18" height="24" class="svg-name">
                 <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
@@ -664,5 +669,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
